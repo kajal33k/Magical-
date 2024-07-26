@@ -234,143 +234,106 @@
 </div>
 
 {{-- feature slider --}}
-<!-- Carousel Container -->
-<!-- Carousel Container -->
-<div class="carousel-container relative mx-4 lg:px-12">
-  <!-- Carousel -->
-  <div class="carousel overflow-hidden w-full relative">
-    <div class="carousel-inner flex transition-transform duration-300 ease-in-out">
-      <!-- Carousel Items -->
-      <div class="carousel-item w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2">
-        <img src="{{asset('assets/img/feature1.png')}}" alt="Feature 1" class="w-full h-auto rounded-lg shadow-lg">
+{{-- <div class="container mx-auto px-4 py-16">
+  <h2 class="text-3xl font-bold text-center text-green-700 mb-12">Our Features</h2>
+  
+  <div class="flex flex-wrap justify-center items-center gap-8" id="features-container">
+    <!-- Features will be dynamically inserted here -->
+  </div>
+
+  <div class="flex justify-center mt-8">
+    <button id="prev-btn" class="mx-2 p-2 bg-gray-500 text-white rounded-full">&lt;</button>
+    <div id="dots" class="flex items-center">
+      <!-- Dots will be dynamically inserted here -->
+    </div>
+    <button id="next-btn" class="mx-2 p-2 bg-gray-500 text-white rounded-full">&gt;</button>
+  </div>
+</div> --}}
+<div class="feature relative overflow-hidden">
+  <div class="swiper-container" id="featureSlider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="{{asset('assets/img/feature1.png')}}" alt="Feature 1" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2">
-        <img src="{{asset('assets/img/feature2.png')}}" alt="Feature 2" class="w-full h-auto rounded-lg shadow-lg">
+      <div class="swiper-slide">
+        <img src="{{asset('assets/img/feature2.png')}}" alt="Feature 2" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2">
-        <img src="{{asset('assets/img/feature3.png')}}" alt="Feature 3" class="w-full h-auto rounded-lg shadow-lg">
+      <div class="swiper-slide">
+        <img src="{{asset('assets/img/feature3.png')}}" alt="Feature 3" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2">
-        <img src="{{asset('assets/img/feature4.png')}}" alt="Feature 4" class="w-full h-auto rounded-lg shadow-lg">
+      <div class="swiper-slide">
+        <img src="{{asset('assets/img/feature4.png')}}" alt="Feature 4" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2">
-        <img src="{{asset('assets/img/feature5.png')}}" alt="Feature 5" class="w-full h-auto rounded-lg shadow-lg">
+      <div class="swiper-slide">
+        <img src="{{asset('assets/img/feature5.png')}}" alt="Feature 2" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2">
-        <img src="{{asset('assets/img/feature6.png')}}" alt="Feature 6" class="w-full h-auto rounded-lg shadow-lg">
+      <div class="swiper-slide">
+        <img src="{{asset('assets/img/feature6.png')}}" alt="Feature 3" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-2">
-        <img src="{{asset('assets/img/feature7.png')}}" alt="Feature 7" class="w-full h-auto rounded-lg shadow-lg">
+      <div class="swiper-slide">
+        <img src="{{asset('assets/img/feature7.png')}}" alt="Feature 4" class="w-full h-full object-cover">
       </div>
     </div>
-    <!-- Carousel Controls -->
-    <button class="carousel-control prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10">
-      &#8592;
-    </button>
-    <button class="carousel-control next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10">
-      &#8594;
-    </button>
+    <div class="swiper-pagination"></div>
   </div>
 </div>
 
-<!-- Carousel Script -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel-inner');
-    const prevButton = document.querySelector('.carousel-control.prev');
-    const nextButton = document.querySelector('.carousel-control.next');
-
-    let scrollAmount = 0;
-    const itemWidth = document.querySelector('.carousel-item').offsetWidth;
-    const visibleItems = window.innerWidth < 640 ? 4 : (window.innerWidth < 1024 ? 2 : 4);
-    const scrollStep = itemWidth * visibleItems;
-
-    // Function to scroll carousel
-    const scrollCarousel = () => {
-      if (scrollAmount >= (carousel.scrollWidth - carousel.clientWidth)) {
-        scrollAmount = 0; // Reset to start
-      } else {
-        scrollAmount += scrollStep;
-      }
-      carousel.style.transform = `translateX(-${scrollAmount}px)`;
-    };
-
-    // Autoplay functionality
-    const autoplay = () => {
-      setInterval(() => {
-        scrollCarousel();
-      }, 3000); // Adjust autoplay interval as needed
-    };
-
-    // Button event listeners
-    nextButton.addEventListener('click', () => {
-      if (scrollAmount <= (carousel.scrollWidth - carousel.clientWidth)) {
-        scrollAmount += scrollStep;
-        carousel.style.transform = `translateX(-${scrollAmount}px)`;
-      }
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('#featureSlider', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
     });
-
-    prevButton.addEventListener('click', () => {
-      if (scrollAmount > 0) {
-        scrollAmount -= scrollStep;
-        carousel.style.transform = `translateX(-${scrollAmount}px)`;
-      }
-    });
-
-    // Start autoplay
-    autoplay();
   });
 </script>
 
-
-
-
-
-
-
-
-
-  {{-- transparent conatainer --}}
-  <div class="relative min-h-screen flex flex-col items-center justify-center bg-black bg-opacity-45">
-    <img src="{{ asset('assets/img/about.jpg') }}" alt="Background Image" class="absolute inset-0 w-full h-full object-cover z-0">
-
-    <div class="absolute inset-0 z-10 bg-black bg-opacity-45 flex flex-col items-center justify-center p-4 overflow-y-auto">
-        <div class="w-full max-w-md mx-auto">
-          <h1 class="text-white font-bold lg:text-lg text-sm text-center mb-3">What Our Customers Say</h1>
-            <div class="grid grid-cols-1 lg:gap-6 gap-2 md:grid-cols-2 lg:grid-cols-2">
-                <div class="bg-white lg:p-6 h-28 w-100 lg:w-full lg:h-full p-1 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
-                    <p class="lg:text-base text-xs lg:mb-4 leading-relaxed">
-                        Magical Hair Colour Shampu exceeded my expectations! The vibrant shade I chose lasted for weeks, and my hair felt soft and nourished. It's easy to use and has a pleasant scent. Highly recommended!
-                    </p>
-                    <p class="lg:text-lg text-xs font-semibold mb-1">Arti</p>
-                </div>
-                <div class="bg-white lg:p-6 h-28 w-100 lg:w-full lg:h-full p-1 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
-                    <p class="lg:text-base text-xs lg:mb-4 leading-relaxed">
-                        I love how Magical Hair Colour Shampu transformed my hair. The colour was stunning, and my hair felt silky smooth. It's a game-changer for home hair colouring. I'm thrilled with the results!
-                    </p>
-                    <p class="lg:text-lg text-xs font-semibold mb-1">Ragani</p>
-                </div>
-                <div class="bg-white lg:p-6 h-28 w-100 lg:w-full lg:h-full p-1 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
-                    <p class="lg:text-base text-xs lg:mb-4 leading-relaxed">
-                        Magical Hair Colour Shampu is a must-have for anyone looking to switch up their hair colour. It's gentle on the hair and delivers vibrant, long-lasting results. I'm impressed by its quality and ease of use. Absolutely fantastic!
-                    </p>
-                    <p class="lg:text-lg text-xs font-semibold mb-1">Gudiya</p>
-                </div>
-                <div class="bg-white lg:p-6 h-28 w-100 lg:w-full lg:h-full p-1 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
-                    <p class="lg:text-base text-xs lg:mb-4 leading-relaxed">
-                        I can't get enough of Magical Hair Colour Shampu! The shade I chose perfectly matched my desired look, and my hair feels so healthy and shiny. It's definitely my go-to product for vibrant hair colour.
-                    </p>
-                    <p class="lg:text-lg text-xs font-semibold mb-1">Kritika</p>
-                </div>
-            </div>
-        </div>
+<div class="bg-gray-900 p-8">
+  <h2 class="text-white text-3xl font-bold mb-6 text-center">What Our Customers Say</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+      <p class="text-gray-700 mb-4">Magical Hair Colour Shampu exceeded my expectations! The vibrant shade I chose lasted for weeks, and my hair felt soft and nourished. It's easy to use and has a pleasant scent. Highly recommended!</p>
+      <p class="font-semibold">Arti</p>
     </div>
+    
+    <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+      <p class="text-gray-700 mb-4">I love how Magical Hair Colour Shampu transformed my hair. The colour was stunning, and my hair felt silky smooth. It's a game-changer for home hair colouring. I'm thrilled with the results!</p>
+      <p class="font-semibold">Ragani</p>
+    </div>
+    
+    <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+      <p class="text-gray-700 mb-4">Magical Hair Colour Shampu is a must-have for anyone looking to switch up their hair colour. It's gentle on the hair and delivers vibrant, long-lasting results. I'm impressed by its quality and ease of use. Absolutely fantastic!</p>
+      <p class="font-semibold">Gudiya</p>
+    </div>
+    
+    <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+      <p class="text-gray-700 mb-4">I can't get enough of Magical Hair Colour Shampu! The shade I chose perfectly matched my desired look, and my hair feels so healthy and shiny. It's definitely my go-to product for vibrant hair colour.</p>
+      <p class="font-semibold">Kritika</p>
+    </div>
+  </div>
 </div>
-
-
-
-
-
 
 
 {{-- CONTACT US --}}
