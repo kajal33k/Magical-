@@ -11,6 +11,7 @@
         <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
         {{-- tailwindcss --}}
         <script src="https://cdn.tailwindcss.com"></script>
+        
         {{-- icons --}}
         <link
         href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"

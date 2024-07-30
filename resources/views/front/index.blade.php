@@ -488,5 +488,42 @@
   </div>
   <!-- Include the Remix Icon CSS for the icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <div class="fixed bottom-4 right-4">
+    <button id="toggleButton" class="bg-green-500 text-white p-2 rounded-full shadow-lg focus:outline-none">
+      <i class="ri-whatsapp-line text-2xl"></i>
+    </button>
+      
+    <div id="iconPanel" class="hidden bg-white rounded-lg shadow-lg p-2 mt-2">
+      <button class="block mb-2 p-2 rounded-full bg-green-500 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+      </button>
+      <button class="block mb-2 p-2 rounded-full bg-green-500 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        </svg>
+      </button>
+    </div>
+  </div>
   
+  <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const iconPanel = document.getElementById('iconPanel');
+  
+    toggleButton.addEventListener('click', (event) => {
+      event.stopPropagation();
+      iconPanel.classList.toggle('hidden');
+    });
+  
+    document.addEventListener('click', (event) => {
+      if (!iconPanel.contains(event.target) && event.target !== toggleButton) {
+        iconPanel.classList.add('hidden');
+      }
+    });
+  
+    iconPanel.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  </script>
 @endsection
