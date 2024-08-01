@@ -4,122 +4,121 @@
 <div class="container mx-auto mt-2 px-4 pt-10" id="home">
     <div class="slider relative overflow-hidden">
         <div class="slides flex transition transform 0.5s ease-in-out">
-            <div class="slide w-100 box-border">
-                <div class="flex">
-                    <img src="{{asset('assets/img/SLIDE1.jpg')}}" class="w-1/2" alt="Slide 2">
-                    <img src="{{asset('assets/img/SLIDE2.png')}}" class="w-1/2" alt="Slide 2">
-                    </div>
-                
+          <div class="slide w-full">
+            <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE1.jpg')}}" class="w-full lg:w-1/2" alt="Slide 1">
+                <img src="{{asset('assets/img/SLIDE2.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
             </div>
+        </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE2.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE3.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE2.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE3.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE3.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE4.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE3.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE4.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE4.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE5.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE4.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE5.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE5.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE6.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE5.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE6.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE7.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE8.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE7.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE8.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE8.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE9.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE8.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE9.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE9.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE10.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE9.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE10.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE10.png')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE11.jpeg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE10.png')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE11.jpeg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE11.jpeg')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE12.jpeg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE11.jpeg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE12.jpeg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE12.jpeg')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE13.jpeg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE12.jpeg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE13.jpeg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE13.jpeg')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE14.jpeg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE13.jpeg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE14.jpeg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide">
-                <div class="flex">
-                    <img src="{{asset('assets/img/SLIDE14.jpeg')}}" class="w-1/2" alt="Slide 2">
-                    <img src="{{asset('assets/img/SLIDE15.jpeg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                    <img src="{{asset('assets/img/SLIDE14.jpeg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                    <img src="{{asset('assets/img/SLIDE15.jpeg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                     </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE15.jpeg')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE16.jpeg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE15.jpeg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE16.jpeg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE16.jpeg')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE17.jpg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE16.jpeg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE17.jpg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE17.jpg')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE18.jpg')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE17.jpg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE18.jpg')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                
             </div>
             <div class="slide w-full">
-                <div class="flex">
-                <img src="{{asset('assets/img/SLIDE18.jpg')}}" class="w-1/2" alt="Slide 2">
-                <img src="{{asset('assets/img/SLIDE19.png')}}" class="w-1/2" alt="Slide 2">
+                <div class="flex flex-col lg:flex-row">
+                <img src="{{asset('assets/img/SLIDE18.jpg')}}" class="w-full lg:w-1/2" alt="Slide 2">
+                <img src="{{asset('assets/img/SLIDE19.png')}}" class="w-full lg:w-1/2 hidden lg:block" alt="Slide 2">
                 </div>
                 
             </div>
