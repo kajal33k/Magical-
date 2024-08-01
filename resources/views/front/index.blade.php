@@ -1,7 +1,7 @@
 @extends('components.main')
 @section('content')
 <!-- Carousel Start -->
-<div class="container mx-auto mt-2 px-4 pt-10">
+<div class="container mx-auto mt-2 px-4 pt-10" id="home">
     <div class="slider relative overflow-hidden">
         <div class="slides flex transition transform 0.5s ease-in-out">
             <div class="slide w-100 box-border">
@@ -131,11 +131,11 @@
 <!-- Carousel End -->
 {{-- buton --}}
 <div class="flex justify-center m-4">
-    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button>
+    <a href="https://wa.link/4j3n7n"><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button></a>
 </div>
 
 {{-- ABOUT US --}}
-<div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 lg:mx-8 lg:p-12 p-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 lg:mx-8 lg:p-12 p-4" id="about">
     <div class="content">
         <h1 class="text-2xl text-green-800 font-bold mb-4">About Us</h1>
         <p class="font-light text-xl">Welcome to Magical Brands, where beauty meets magic! Our revolutionary product, Magical Hair Colour Shampu, transforms your hair care routine. With a unique blend of nourishing shampoo and vibrant hair colour, our shampu delivers salon-worthy results in the comfort of your home. Discover our gentle yet effective formula that leaves your locks healthy and lustrous. Choose from a wide range of shades to express your individuality. Our commitment to quality and safety means you can trust our tested and chemical-free product. Unlock the power of self-expression and let your hair become a canvas for your dreams. Experience the magic at magicalbrands.info.</p>
@@ -150,11 +150,11 @@
 </div>
 {{-- buton --}}
 <div class="flex justify-center m-4">
-    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button>
+  <a href="https://wa.link/4j3n7n"><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button></a>
 </div>
 
 {{-- heading --}}
-<h1 class="text-center font-bold text-green-800 text-3xl">Magical Hair Colour Shampoo</h1>
+<h1 class="text-center font-bold text-green-800 text-3xl" id="product">Magical Hair Colour Shampoo</h1>
 
 <div class="container mx-auto px-4 py-10">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
@@ -218,7 +218,7 @@
 </div>
 {{-- buton --}}
 <div class="flex justify-center m-4">
-    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button>
+  <a href="https://wa.link/4j3n7n"><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button></a>
 </div>
 
 {{-- 2nd video --}}
@@ -230,7 +230,7 @@
 </div>
 {{-- buton --}}
 <div class="flex justify-center m-4">
-    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button>
+  <a href="https://wa.link/4j3n7n"><button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg px-4 py-4 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 text-xl">Buy Now</button></a>
 </div>
 
 {{-- feature slider --}}
@@ -337,7 +337,7 @@
 
 
 {{-- CONTACT US --}}
-<section class="bg-gray-100 py-12">
+<section class="bg-gray-100 py-12" id="contact">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- Get in Touch Section -->
@@ -490,20 +490,21 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <div class="fixed bottom-4 right-4">
     <button id="toggleButton" class="bg-green-500 text-white p-2 rounded-full shadow-lg focus:outline-none">
-      <i class="ri-whatsapp-line text-2xl"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
     </button>
       
     <div id="iconPanel" class="hidden bg-white rounded-lg shadow-lg p-2 mt-2">
-      <button class="block mb-2 p-2 rounded-full bg-green-500 text-white">
+      <a href="tel:+916388337746"><button class="block mb-2 p-2 rounded-full bg-green-500 text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
-      </button>
-      <button class="block mb-2 p-2 rounded-full bg-green-500 text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
-      </button>
+      </button></a>
+      <a href="https://wa.link/4j3n7n"><button class="block mb-2 p-2 rounded-full bg-green-500 text-white">
+        
+        <i class="ri-whatsapp-line text-2xl"></i>
+      </button></a>
     </div>
   </div>
   
