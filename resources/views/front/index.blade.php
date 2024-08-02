@@ -481,8 +481,8 @@
   </footer>
   <div class="bg-gray-600 py-6">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-      <p class="text-gray-300 mb-2 md:mb-0">©2023. magicalbrands.info</p>
-      <p class="text-gray-300">Developed by Real Victory Groups</p>
+      <p class="text-gray-300 mb-2 md:mb-0">©2024. magicalbrands.info</p>
+      <p class="text-gray-300"><a href="https://realvictorygroups.com/">Developed by Real Victory Groups</a> </p>
     </div>
   </div>
   <!-- Include the Remix Icon CSS for the icons -->
